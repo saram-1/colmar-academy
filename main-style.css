@@ -8,37 +8,54 @@ body {
   font-size: 16px;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Section 1: Navigation bar */
+
 .navigation-bar {
   height: 64px;
-  display: inline-flex;
-  /*justify-content: center;*/
+  /*width: 100%;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   padding: 0px 24px;
 }
 
 .logo {
-  float:
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /*justify-content: space-between;*/
+  align-items: center;
+  height: 32px;
 }
 
-/* i don't think im interpreting the logo size correctly
-#logo {
-  height: 32px;
-}*/
 
-nav li {
+.navigation-bar nav li {
   /* padding-right: 24px; */
   /* links not floating to right?! */
-  justify-content: flex-end;
   list-style-type: none;
   display: inline;
   padding: 0px 16px;
 }
 
+/* Section 2: Welcome banner */
+
 .welcome-banner {
   background-color: #CCC;
-  display: inline-flex;
+  /*display: inline-flex;
   justify-content: center;
+  align-items: center; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*not wrapping*/
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -47,43 +64,61 @@ nav li {
   padding: 32px 24px;
 }
 
+.welcome-banner-description {
+  display: flex;
+  flex-direction: column;
+}
+
 .welcome-banner-description h2 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .welcome-banner-description h3 {
-  font-size: 1.5rem;
   padding: 10px 0px;
 }
 
 .welcome-banner-description .button {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  width: 100%;
   padding: 8px 0px;
   color: white;
-  background-color: blue;
+  background-color: #696969;
+  text-align: center;
+  text-decoration: none;
   /*need to center text somehow */
+}
+
+.welcome-banner-description .button:hover {
+  background-color: #434a54;
 }
 
 .welcome-banner-description {
   /*width: 30%;*/
+  max-width: 30%;
 }
+
+/* Section 3: News */
+
+/* Highlighted article */
 
 .news {
   background-color: #F2F2F2;
-  display: inline-flex;
+  display: flex;
+  /*or inline?*/
   flex-direction: row;
+  flex-wrap: nowrap;
   /*justify-content: center;
   align-items: center;*/
 }
 
 .highlighted-article {
-  padding: 32px 24px;
-  /*width: 60%;*/
+  margin: 32px 24px 32px 24px;
+  width: 60%;
   display: flex;
   flex-direction: column;
 }
 
-.highlighted-article h2 {
+.highlighted-article h3 {
   padding-top: 32px;
   padding-bottom: 24px;
 }
@@ -101,20 +136,170 @@ nav li {
   font-size: 0.5rem;
 }
 
+/* News carousel */
+
 .news-carousel {
-  /*width: 40%;*/
-  padding-left: 24px;
-  display: inline-flex;
-  flex-direction: column;
+  padding-bottom: 32px;
+  width: 35%;
+  border-left: 1px solid #CCC;
 }
 
-.news-carousel img {
-  width: 35%;
+.news-carousel-top, .news-carousel-middle, .news-carousel-bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 .news-carousel-top {
-  display: inline-flex;
+  padding-top: 32px;
+}
+
+.news-carousel-top:hover, .news-carousel-middle:hover, .news-carousel-bottom:hover {
+  background-color: #CCC;
+}
+
+.news-carousel-middle img, .news-carousel-bottom img {
+  width: 35%;
+  height: auto;
+  padding: 16px;
+}
+
+.news-carousel-top img {
+  width: 35%;
+  height: auto;
+  padding: 0px 16px 16px 16px;
+}
+
+.news-carousel-text {
+  width: 65%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.news-carousel-text p {
+  padding-top: 8px;
+}
+
+/*.news-carousel h2, p, a {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}*/
+
+/* Section 4: Courses */
+
+.courses {
+  padding: 32px 72px;
+  background-color: #CCC
+}
+
+.courses-showcase {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /*not centering*/
+  align-items: center;
+  flex-wrap: wrap; /*
+  padding-bottom: 32px;
+  padding-left: 72px;
+  padding-right: 72px; */
+  max-width: 1100px;
+  /*margin: 32px 72px;*/
+}
+
+/* Start learning title */
+.courses-showcase-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.courses-showcase img {
+  height: auto;
+  width: 100%; /*50% of what? how does the percentages work? is it based on parents width?*/
+}
+
+.courses-showcase-block {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: white; /*grey color not appearing*/
+  width: 300px;
+  height: 300px;
+  margin: 32px;
+  /* not working? border-bottom: 32px;
+  border-top: 32px; */
+
+  /*width: 50px;*/ /*makes no diff*/
+}
+
+/* is this working? */
+
+.courses-showcase .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-bottom: 24px;
+  padding-right: 16px;
+  height: 155px;
+}
+
+.courses-showcase .text h4 {
+  padding: 8px 0px;
+  text-transform: uppercase;
+}
+
+.courses-showcase .text p {
+  height: 60px;
+}
+
+
+/* Section 5: thesis exhibit */
+
+/*.thesis {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}*/
+
+/* Thesis exhibit title */
+.thesis h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 32px 0px;
+  width: 100%;
+}
+
+
+.thesis-news-block {
+  display: flex;
+}
+
+video {
+  height: 400px;
+}
+
+/* footer */
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-left: 24px;
+  height: 40px;
+  border-top: 1px solid #CCC;
+}
+
+footer li {
+  list-style-type: none;
+  display: inline;
+  padding: 0 16px;
 }
