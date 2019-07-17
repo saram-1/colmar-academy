@@ -35,8 +35,8 @@
     <img id="welcome-banner-img" src="./images/banner.jpg"/>
     <!-- I'm debating what should be h1, h2, h3 etc. I need to think thru this -->
     <div class="welcome-banner-description">
-      <h2>Learn something new everyday</h2>
-      <h3>with Colmar Academy; one of the UK's top 30 institutions</h3>
+      <h2>Learn something <br> new everyday</h2>
+      <h3>with Colmar Academy; one of the UK's top <br> 30 institutions</h3>
       <a href="./index.html" class="button">Start here</a>
     </div>
     </div>
@@ -149,16 +149,16 @@
 <h2>Thesis exhibit</h2>
 
 <div class="thesis-news-block">
-  <div class="highlighted-article">
+  <div class="highlighted-article" id="thesis-highlighted-article-no-top-margin">
     <video controls>
-    <source src="./videos/thesis.mp4" type="video/mp4">This video failed to load.
+    <source src="./videos/thesis.mp4" type="video/mp4">
     </video>
-    <h3>Reimagine urban</h3>
+    <h3 id="thesis-highlighted-article-h3">Reimagine urban</h3>
     <p>Milja Hartikainen's master thesis explores literature and benchmarking cases to provide practical tools for building successful multi-scalar urban developments, applying her findings to the neighbourhood of Moabit in Berlin.</p>
   </div>
 
-  <div class="news-carousel">
-    <div class="news-carousel-top">
+  <div class="news-carousel" id="thesis-news-carousel"> <!--can i use same id in two places?-->
+    <div class="news-carousel-top" id="thesis-carousel-no-top-margin">
       <img src="./images/thesis-fisma.jpg"/>
       <div class="news-carousel-text">
         <h3>Fisma: Design and Prototype</h3>
@@ -174,7 +174,7 @@
     </div>
   </div>
 </div>
-</div>
+</div> <!-- is this 1 extra div?-->
 
 <!-- footer section -->
 <footer>
@@ -182,8 +182,8 @@
 
   <nav>
     <ul>
-      <li><a href="./index.html">Terms</li>
-      <li><a href="./index.html">Privacy</li>
+      <li><a href="./index.html">Terms</a></li>
+      <li><a href="./index.html">Privacy</a></li>
     </ul>
   </nav>
 </footer>

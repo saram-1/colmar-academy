@@ -140,7 +140,7 @@ a {
 
 .news-carousel {
   padding-bottom: 32px;
-  width: 35%;
+  width: 40%;
   border-left: 1px solid #CCC;
 }
 
@@ -198,13 +198,13 @@ a {
 .courses-showcase {
   display: flex;
   flex-direction: row;
-  justify-content: center; /*not centering*/
-  align-items: center;
+  justify-content: center; /*not centering. IT'S COLUMNM so this is up down not left right*/
+  /*align-items: flex-start;*/ /*its not hitting the top?*/
   flex-wrap: wrap; /*
   padding-bottom: 32px;
   padding-left: 72px;
   padding-right: 72px; */
-  max-width: 1100px;
+  /*max-width: 1100px; this is making the centering funny with excess space on the right. BUT HOW DO I STOP 4 BLOCKS SHOWING ON A LARGER SCREEN? */
   /*margin: 32px 72px;*/
 }
 
@@ -214,6 +214,7 @@ a {
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  padding-bottom: 32px;
 }
 
 .courses-showcase img {
@@ -225,11 +226,12 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background-color: white; /*grey color not appearing*/
   width: 300px;
   height: 300px;
-  margin: 32px;
+  margin-bottom: 32px;
+  margin-right: 32px;
   /* not working? border-bottom: 32px;
   border-top: 32px; */
 
@@ -256,6 +258,12 @@ a {
 
 .courses-showcase .text p {
   height: 60px;
+  line-height: 1.2;
+}
+
+.courses-showcase h3 {
+  font-size: 1.4rem;
+  padding-bottom: 6px;
 }
 
 
@@ -282,18 +290,36 @@ a {
   display: flex;
 }
 
+#thesis-highlighted-article-no-top-margin {
+  margin-top: 0px;
+} /* why margin and not padding? try padding*/
+
+#thesis-carousel-no-top-margin {
+  padding-top: 0px;
+} /* not working. Fixed: i was targeting the wrong thing; the whole carousel block and not just the top news item*/
+
+#thesis-highlighted-article-h3 {
+  padding-top: 24px;
+  padding-bottom: 8px;
+}
+
+#thesis-news-carousel {
+  border: none;
+}
+
 video {
-  height: 400px;
+  max-height: 450px; /*problem area. want it proportional, responsive, with no gap at the top of the video*/ /* the video wasnt filling the full width before. now that i made the height bigger - 600px - it does*/
 }
 
 /* footer */
 
 footer {
-  display: flex;
+  /*display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /*justify-content: flex-start;*/ /*stopping it from being flex allowed me to position the kids in the right place with float!*/
   padding-top: 16px;
   padding-left: 24px;
+  padding-right: 24px; /*or 24-16? to make it equal to left padding */
   height: 40px;
   border-top: 1px solid #CCC;
 }
@@ -303,3 +329,22 @@ footer li {
   display: inline;
   padding: 0 16px;
 }
+
+footer p {
+  float: left;
+}
+
+footer nav {
+  float: right;
+}
+
+/* trying to make nav all the way to the right, and copyright to the left
+footer p {
+display: flex;
+justify-content: flex-start;
+}
+
+footer nav {
+  display: flex;
+  justify-content: flex-end;
+}*/
