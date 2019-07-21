@@ -54,6 +54,10 @@ a {
   padding: 0px 16px;
 }
 
+.nav-links-mobile {
+  display: none;
+}
+
 /* Section 2: Welcome banner */
 
 .welcome-banner {
@@ -77,16 +81,19 @@ a {
 .welcome-banner-description {
   display: flex;
   flex-direction: column;
+  /*flex-wrap: wrap; not working */
 }
 
 .welcome-banner-description h2 {
   font-size: 2.4rem;
+  width: 90%;
 }
 
 .welcome-banner-description h3 {
   padding: 15px 0px 30px 0px;
   font-size: 1.1rem;
   line-height: 1.4;
+  width: 90%;
 }
 
 .welcome-banner-description .button {
@@ -100,8 +107,11 @@ a {
   /*need to center text somehow */
 }
 
+
+@media only screen and (min-width: 600px) {
 .welcome-banner-description .button:hover {
   background-color: #434a54;
+}
 }
 
 .welcome-banner-description {
@@ -169,8 +179,10 @@ line-height: 1.4;
   padding-top: 32px;
 }
 
+@media only screen and (min-width: 600px) {
 .news-carousel-top:hover, .news-carousel-middle:hover, .news-carousel-bottom:hover {
   background-color: #CCC;
+}
 }
 
 .news-carousel-middle img, .news-carousel-bottom img {
@@ -198,15 +210,19 @@ line-height: 1.4;
   justify-content: center;
 }
 
-.news-carousel-text p {
+.news-carousel-text h4 {
   padding: 8px 0px;
   line-height: 1.4;
   font-size: 1.1rem;
   width: 95%;
+  font-weight: normal;
 }
+
 
 .news-carousel-text a {
   color: #3e72c7;
+  font-weight: 500;
+  font-size: 1.1rem;
 }
 
 /*.news-carousel h2, p, a {
@@ -376,3 +392,160 @@ footer nav {
   display: flex;
   justify-content: flex-end;
 }*/
+
+@media only screen and (max-width: 600px) {
+
+.logo h1 {
+  display: none;
+}
+
+.nav-links ul {
+  display: none;
+}
+
+.nav-links-mobile {
+  display: flex;
+}
+
+#welcome-banner-img {
+  width: 100%;
+  padding: 0px;
+}
+
+.welcome-banner-description h2 {
+  font-size: 2.5rem;
+}
+
+.welcome-banner-description h3 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  padding: 32px 0px 24px 0px;
+}
+
+.welcome-banner-description {
+  max-width: 100%;
+  padding: 32px 16px 32px 16px;
+}
+
+.highlighted-article {
+display: none;
+}
+
+.news-carousel {
+  width: 100%;
+  background-color: white;
+  padding-bottom: 0px;
+}
+
+.news-carousel img {
+  /*width: 100%;
+  height: 300px;*/
+}
+
+.news-carousel-text {
+  /*width: 100%;*/
+  /*padding: 0px 0px 64px 16px; /*left and bottom padding not quite right*/
+padding-left: 16px;
+width: 90%; /* 100% causing overflow*/
+}
+
+.news-carousel-text h3 {
+  font-size: 1.8rem;
+  padding-top: 10px;
+}
+
+.news-carousel-top,
+.news-carousel-middle,
+.news-carousel-bottom {
+  flex-direction: column;
+  padding-bottom: 32px; /* Spec says 64px but that sized gap looks too big to me. I chose 32px instead */
+  padding-left: 16px;
+}
+
+.news-carousel-top {
+padding-top: 16px;
+}
+
+.news-carousel-top img,
+.news-carousel-middle img,
+.news-carousel-bottom img {
+width: 90%;
+height: 270px;
+object-fit: cover;
+padding-left: 0px;
+}
+
+/* (hover:hover) {
+visibility: hidden;
+} don't know how to stop hover on mobile*/
+
+
+.courses-showcase-block img,
+.courses-showcase-block h4,
+.courses-showcase-block p {
+  display: none;
+}
+
+.courses-showcase-block {
+  height: 40px; /*wrong!*/
+  padding: 16px 0px 24px 16px;
+  background-color: #CCC;
+}
+
+.courses {
+  background-color: white;
+  border-top: 1px solid #CCC;
+}
+
+.courses-showcase-title {
+font-size: 2.5rem;
+padding-bottom: 16px;
+}
+
+.thesis {
+  border-top: 1px solid #CCC;
+}
+
+.thesis h2 {
+  font-size: 2.5rem;
+}
+
+.thesis .news-carousel {
+  display: none;
+}
+
+.thesis video {
+  display: block;
+  width: 100%; /* not showing */
+}
+
+.thesis h2 {
+padding: 32px 0px 16px 0px;
+}
+
+footer nav {
+  display: none;
+}
+
+footer p {
+  padding: 16px 0px 16px 16px;
+}
+
+footer {
+  padding: 0px;
+  margin-top: 24px;
+  border-top: none;
+}
+
+#thesis-highlighted-article-no-top-margin {
+  display: block;
+  width: 100%;
+  margin: 0px;
+}
+
+.thesis-news-block h3,
+.thesis-news-block p {
+  display: none;
+}
+
+}
