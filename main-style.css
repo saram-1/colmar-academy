@@ -1,3 +1,5 @@
+/* Global styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +29,6 @@ a {
 
 .navigation-bar {
   height: 64px;
-  /*width: 100%;*/
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -40,15 +41,15 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  /*justify-content: space-between;*/
   align-items: center;
   height: 32px;
 }
 
+span {
+  font-weight: normal;
+}
 
 .navigation-bar nav li {
-  /* padding-right: 24px; */
-  /* links not floating to right?! */
   list-style-type: none;
   display: inline;
   padding: 0px 16px;
@@ -62,13 +63,9 @@ a {
 
 .welcome-banner {
   background-color: #CCC;
-  /*display: inline-flex;
-  justify-content: center;
-  align-items: center; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /*not wrapping*/
   justify-content: flex-start;
   align-items: center;
 }
@@ -81,7 +78,7 @@ a {
 .welcome-banner-description {
   display: flex;
   flex-direction: column;
-  /*flex-wrap: wrap; not working */
+  max-width: 30%;
 }
 
 .welcome-banner-description h2 {
@@ -104,7 +101,6 @@ a {
   background-color: #696969;
   text-align: center;
   text-decoration: none;
-  /*need to center text somehow */
 }
 
 
@@ -114,30 +110,27 @@ a {
 }
 }
 
-.welcome-banner-description {
-  /*width: 30%;*/
-  max-width: 30%;
-}
-
 /* Section 3: News */
-
-/* Highlighted article */
 
 .news {
   background-color: #F2F2F2;
   display: flex;
-  /*or inline?*/
   flex-direction: row;
   flex-wrap: nowrap;
-  /*justify-content: center;
-  align-items: center;*/
 }
+
+/* Highlighted article */
 
 .highlighted-article {
   margin: 32px 24px 32px 24px;
   width: 60%;
   display: flex;
   flex-direction: column;
+}
+
+#highlighted-article-img {
+  /*flex: 1 2 60%;*/
+  width: 100%;
 }
 
 .highlighted-article h3 {
@@ -151,12 +144,7 @@ font-size: 1.1rem;
 line-height: 1.4;
 }
 
-#highlighted-article-img {
-  /*flex: 1 2 60%;*/
-  width: 100%;
-}
-
-#author {
+.author {
   font-size: 1rem;
   padding-top: 40px;
 }
@@ -169,7 +157,9 @@ line-height: 1.4;
   border-left: 1px solid #CCC;
 }
 
-.news-carousel-top, .news-carousel-middle, .news-carousel-bottom {
+.news-carousel-top,
+.news-carousel-middle,
+.news-carousel-bottom {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -180,7 +170,9 @@ line-height: 1.4;
 }
 
 @media only screen and (min-width: 600px) {
-.news-carousel-top:hover, .news-carousel-middle:hover, .news-carousel-bottom:hover {
+.news-carousel-top:hover,
+.news-carousel-middle:hover,
+.news-carousel-bottom:hover {
   background-color: #CCC;
 }
 
@@ -189,7 +181,8 @@ line-height: 1.4;
 }
 }
 
-.news-carousel-middle img, .news-carousel-bottom img {
+.news-carousel-middle img,
+.news-carousel-bottom img {
   width: 35%;
   height: auto;
   padding: 16px;
@@ -201,17 +194,17 @@ line-height: 1.4;
   padding: 0px 16px 16px 16px;
 }
 
-.news-carousel-text h3 {
-  font-size: 1.3rem;
-  width: 95%;
-}
-
 .news-carousel-text {
   width: 65%;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.news-carousel-text h3 {
+  font-size: 1.3rem;
+  width: 95%;
 }
 
 .news-carousel-text h4 {
@@ -222,20 +215,24 @@ line-height: 1.4;
   font-weight: normal;
 }
 
-
 .news-carousel-text a {
   color: #3e72c7;
   font-weight: 500;
   font-size: 1.1rem;
 }
 
-/*.news-carousel h2, p, a {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}*/
-
 /* Section 4: Courses */
+
+/* "Start learning" title */
+.courses-showcase-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 32px;
+}
+
+/* tile cards */
 
 .courses {
   padding: 32px 72px;
@@ -245,28 +242,13 @@ line-height: 1.4;
 .courses-showcase {
   display: flex;
   flex-direction: row;
-  justify-content: center; /*not centering. IT'S COLUMNM so this is up down not left right*/
-  /*align-items: flex-start;*/ /*its not hitting the top?*/
-  flex-wrap: wrap; /*
-  padding-bottom: 32px;
-  padding-left: 72px;
-  padding-right: 72px; */
-  /*max-width: 1100px; this is making the centering funny with excess space on the right. BUT HOW DO I STOP 4 BLOCKS SHOWING ON A LARGER SCREEN? */
-  /*margin: 32px 72px;*/
-}
-
-/* Start learning title */
-.courses-showcase-title {
-  display: flex;
-  flex-direction: row;
   justify-content: center;
-  width: 100%;
-  padding-bottom: 32px;
+  flex-wrap: wrap;
 }
 
 .courses-showcase img {
   height: auto;
-  width: 100%; /*50% of what? how does the percentages work? is it based on parents width?*/
+  width: 100%;
 }
 
 .courses-showcase-block {
@@ -274,18 +256,12 @@ line-height: 1.4;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-color: white; /*grey color not appearing*/
+  background-color: white;
   width: 300px;
   height: 300px;
   margin-bottom: 32px;
   margin-right: 32px;
-  /* not working? border-bottom: 32px;
-  border-top: 32px; */
-
-  /*width: 50px;*/ /*makes no diff*/
 }
-
-/* is this working? */
 
 .courses-showcase .text {
   display: flex;
@@ -315,16 +291,9 @@ line-height: 1.4;
 }
 
 
-/* Section 5: thesis exhibit */
+/* Section 5: Thesis exhibit */
 
-/*.thesis {
-  background-color: white;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}*/
-
-/* Thesis exhibit title */
+/* "Thesis exhibit" title */
 .thesis h2 {
   display: flex;
   flex-direction: row;
@@ -333,18 +302,18 @@ line-height: 1.4;
   width: 100%;
 }
 
-
+/* Thesis section */
 .thesis-news-block {
   display: flex;
 }
 
 #thesis-highlighted-article-no-top-margin {
   margin-top: 0px;
-} /* why margin and not padding? try padding*/
+}
 
 #thesis-carousel-no-top-margin {
   padding-top: 0px;
-} /* not working. Fixed: i was targeting the wrong thing; the whole carousel block and not just the top news item*/
+}
 
 #thesis-highlighted-article-h3 {
   padding-top: 24px;
@@ -356,18 +325,15 @@ line-height: 1.4;
 }
 
 video {
-  max-height: 450px; /*problem area. want it proportional, responsive, with no gap at the top of the video*/ /* the video wasnt filling the full width before. now that i made the height bigger - 600px - it does*/
+  max-height: 450px; /* Problem area: I want there to be no gap at the top of the video */
 }
 
-/* footer */
+/* Section 6: footer */
 
 footer {
-  /*display: flex;
-  flex-direction: row;
-  /*justify-content: flex-start;*/ /*stopping it from being flex allowed me to position the kids in the right place with float!*/
   padding-top: 16px;
   padding-left: 24px;
-  padding-right: 24px; /*or 24-16? to make it equal to left padding */
+  padding-right: 24px;
   height: 40px;
   border-top: 1px solid #CCC;
 }
@@ -386,18 +352,11 @@ footer nav {
   float: right;
 }
 
-/* trying to make nav all the way to the right, and copyright to the left
-footer p {
-display: flex;
-justify-content: flex-start;
-}
-
-footer nav {
-  display: flex;
-  justify-content: flex-end;
-}*/
+/* Mobile friendly version of the site */
 
 @media only screen and (max-width: 600px) {
+
+  /* Section 1: Navigation bar */
 
 .logo h1 {
   display: none;
@@ -411,9 +370,16 @@ footer nav {
   display: flex;
 }
 
+/* Section 2: Welcome banner */
+
 #welcome-banner-img {
   width: 100%;
   padding: 0px;
+}
+
+.welcome-banner-description {
+  max-width: 100%;
+  padding: 32px 16px 32px 16px;
 }
 
 .welcome-banner-description h2 {
@@ -426,14 +392,11 @@ footer nav {
   padding: 32px 0px 24px 0px;
 }
 
-.welcome-banner-description {
-  max-width: 100%;
-  padding: 32px 16px 32px 16px;
-}
-
 .welcome-banner-description .button {
   font-size: 1.4rem;
 }
+
+/* Section 3: News */
 
 .highlighted-article {
 display: none;
@@ -445,16 +408,9 @@ display: none;
   padding-bottom: 0px;
 }
 
-.news-carousel img {
-  /*width: 100%;
-  height: 300px;*/
-}
-
 .news-carousel-text {
-  /*width: 100%;*/
-  /*padding: 0px 0px 64px 16px; /*left and bottom padding not quite right*/
 padding-left: 16px;
-width: 90%; /* 100% causing overflow*/
+width: 90%;
 }
 
 .news-carousel-text h3 {
@@ -466,7 +422,7 @@ width: 90%; /* 100% causing overflow*/
 .news-carousel-middle,
 .news-carousel-bottom {
   flex-direction: column;
-  padding-bottom: 32px; /* Spec says 64px but that sized gap looks too big to me. I chose 32px instead */
+  padding-bottom: 32px; /* Spec says 64px but that looks too big to me. I chose 32px instead */
   padding-left: 16px;
 }
 
@@ -483,28 +439,24 @@ object-fit: cover;
 padding-left: 0px;
 }
 
-/* (hover:hover) {
-visibility: hidden;
-} don't know how to stop hover on mobile*/
+/* Section 4: Courses */
 
-
-/*.courses-showcase-block img,
-.courses-showcase-block h4,
-.courses-showcase-block p {
-  display: none;
-}*/
-
-.courses-showcase-block {
-  /*height: 40px; /*wrong!*/
-  /*padding: 16px 0px 24px 16px;
-  background-color: #CCC;*/
-  display: none;
+.courses {
+  background-color: white;
+  border-top: 1px solid #CCC;
+  padding: 0px;
 }
 
-/*.courses-showcase-block h3 {
-  display: flex;
-  flex-direction: column;
-}*/
+.courses-showcase-title {
+font-size: 2.5rem;
+padding-bottom: 16px;
+padding-top: 32px;
+text-align: center;
+}
+
+.courses-showcase-block {
+  display: none;
+}
 
 .courses-showcase-mobile {
   display: flex;
@@ -520,18 +472,7 @@ visibility: hidden;
   font-weight: normal;
 }
 
-.courses {
-  background-color: white;
-  border-top: 1px solid #CCC;
-  padding: 0px;
-}
-
-.courses-showcase-title {
-font-size: 2.5rem;
-padding-bottom: 16px;
-padding-top: 32px;
-text-align: center;
-}
+/* Section 5: Thesis exhibit */
 
 .thesis {
   border-top: 1px solid #CCC;
@@ -539,6 +480,7 @@ text-align: center;
 
 .thesis h2 {
   font-size: 2.5rem;
+  padding: 32px 0px 16px 0px;
 }
 
 .thesis .news-carousel {
@@ -547,25 +489,7 @@ text-align: center;
 
 .thesis video {
   display: block;
-  width: 100%; /* not showing */
-}
-
-.thesis h2 {
-padding: 32px 0px 16px 0px;
-}
-
-footer nav {
-  display: none;
-}
-
-footer p {
-  padding: 16px 0px 16px 16px;
-}
-
-footer {
-  padding: 0px;
-  margin-top: 24px;
-  border-top: none;
+  width: 100%;
 }
 
 #thesis-highlighted-article-no-top-margin {
@@ -577,6 +501,22 @@ footer {
 .thesis-news-block h3,
 .thesis-news-block p {
   display: none;
+}
+
+/* Section 6: footer */
+
+footer {
+  padding: 0px;
+  margin-top: 24px;
+  border-top: none;
+}
+
+footer nav {
+  display: none;
+}
+
+footer p {
+  padding: 16px 0px 16px 16px;
 }
 
 }

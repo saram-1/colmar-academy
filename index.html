@@ -10,204 +10,202 @@
 
 <body>
 
+  <!-- Section 1: Navigation bar featuring favicon and page links -->
   <div class="navigation-bar">
 
     <div class="logo">
-      <a href="./index.html"><img src="./images/ic-logo.svg" alt="Colmar Academy favicon"/></a>
-      <h1>Colmar</h1>
-      <h1>Academy</h1>
+      <a href="./index.html"><img src="./images/ic-logo.svg" alt="Colmar Academy logo"/>
+      <h1><a href="./index.html">Colmar<span>Academy</span></a></h1>
     </div>
 
-    <div class="nav-links">
-      <nav>
+      <nav class="nav-links">
         <ul>
-          <li>On campus</li>
-          <li>Online</li>
-          <li>For companies</li>
-          <li>Sign in</li>
+          <li><a href="./index.html">On campus</a></li>
+          <li><a href="./index.html">Online</a></li>
+          <li><a href="./index.html">For companies</a></li>
+          <li><a href="./index.html">Sign in</a></li>
         </ul>
       </nav>
-    </div>
 
-    <div class="nav-links-mobile">
-      <nav>
+    <!-- Mobile version of navigation bar. No text, just image icons. -->
+      <nav class="nav-links-mobile">
         <ul>
-          <li><a href="./index.html"><img src="./images/ic-on-campus.svg"/></a>
-          <li><a href="./index.html"><img src="./images/ic-online.svg"/></a>
-          <li><a href="./index.html"><img src="./images/ic-login.svg"/></a>
+          <li><a href="./index.html"><img src="./images/ic-on-campus.svg"/></a></li>
+          <li><a href="./index.html"><img src="./images/ic-online.svg"/></a></li>
+          <li><a href="./index.html"><img src="./images/ic-login.svg"/></a></li>
         </ul>
       </nav>
-    </div>
 
   </div>
 
+  <!-- Section 2: welcome banner featuring large image, block of text, and button -->
   <div class="welcome-banner">
-
     <img id="welcome-banner-img" src="./images/banner.jpg"/>
-    <!-- I'm debating what should be h1, h2, h3 etc. I need to think thru this -->
     <div class="welcome-banner-description">
       <h2>Learn something new everyday</h2>
       <h3>with Colmar Academy; one of the UK's top 30 institutions</h3>
       <a href="./index.html" class="button">Start here</a>
     </div>
-    </div>
-
   </div>
 
+  <!-- Section 3: news articles featuring 1 large image and summary, and a column of 3 smaller articles -->
   <div class="news">
     <div class="highlighted-article">
-      <img id="highlighted-article-img" src="./images/information-main.jpg"/>
+      <img id="highlighted-article-img" src="./images/information-main.jpg" alt="man reading book"/>
       <h3>It doesn't hurt to keep practising</h3>
-      <p>Matthew Syed, bestselling writer and international table-tennis champion, takes us on a revelatory exploration of being the best and the true nature of talent.</p>
-      <p id="author">Emanuel, Sr Strategist at Hiring.com</p>
+      <p>Matthew Syed, bestselling writer and international table-tennis champion, takes us on a revelatory exploration of practise and the true nature of talent.</p>
+      <p class="author">Emanuel, Sr Strategist at Hiring.com</p>
     </div>
 
     <div class="news-carousel">
       <div class="news-carousel-top">
-        <img src="./images/information-orientation.jpg"/>
+        <img src="./images/information-orientation.jpg" alt="people walking"/>
         <div class="news-carousel-text">
           <h3>Orientation date</h3>
           <h4>Tue 10/11 &amp; Wed 10/12: 8am-3pm</h4>
-          <a href="./index.html"><p>Read more</p></a>
+          <p><a href="./index.html">Read more</a></p>
         </div>
       </div>
+
       <div class="news-carousel-middle">
-        <img src="./images/information-campus.jpg"/>
+        <img src="./images/information-campus.jpg" alt="campus room"/>
         <div class="news-carousel-text">
           <h3>Our campus</h3>
           <h4>Find which campus is close by you</h4>
-          <a href="./index.html"><p>Read more</p></a>
+          <p><a href="./index.html">Read more</a></p>
         </div>
       </div>
+
       <div class="news-carousel-bottom">
-        <img src="./images/information-guest-lecture.jpg"/>
+        <img src="./images/information-guest-lecture.jpg" alt="oliver sack's face"/>
         <div class="news-carousel-text">
           <h3>Special guest lecture</h3>
           <h4>Join a keynote with Oliver Sack about music in medical treatment</h4>
-          <a href="./index.html"><p>Read more</p></a>
+          <p><a href="./index.html">Read more</a></p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Courses showcase section -->
-<div class="courses">
+  <!-- Section 4: List of courses offered, featuring image and summary -->
+  <div class="courses">
 
     <h2 class="courses-showcase-title">Start learning</h2>
 
-<div class="courses-showcase">
-    <div class="courses-showcase-block">
-      <img src="./images/course-software.jpg" />
-      <div class="text">
-        <h3>Software engineering</h3>
-        <h4>Courses</h4>
-        <p>Web Development, Mobile Development, iOT, APIs</p>
+    <div class="courses-showcase">
+      <div class="courses-showcase-block">
+        <img src="./images/course-software.jpg" alt="desk and two mac computers"/>
+        <div class="text">
+          <h3>Software engineering</h3>
+          <h4>Courses</h4>
+          <p>Web Development, Mobile Development, iOT, APIs</p>
+        </div>
+      </div>
+
+      <div class="courses-showcase-block">
+        <img src="./images/course-computer-art.jpg" alt="mobile phone in hand"/>
+        <div class="text">
+          <h3>Computer art</h3>
+          <h4>Courses</h4>
+          <p>Imaging &amp; Design, Web Design, Motion Graphics &amp; Visual Effects, Computer Animation</p>
+        </div>
+      </div>
+
+      <div class="courses-showcase-block">
+        <img src="./images/course-design.jpg" alt="man holding vintage camera"/>
+        <div class="text">
+          <h3>Design</h3>
+          <h4>Courses</h4>
+          <p>User Experience Design, User Research, Visual Design</p>
+        </div>
+      </div>
+
+      <div class="courses-showcase-block">
+        <img src="./images/course-data.jpg" alt="laptop"/>
+        <div class="text">
+          <h3>Data</h3>
+          <h4>Courses</h4>
+          <p>Data Science, Big Data, SQL, Data Visualization</p>
+        </div>
+      </div>
+
+      <div class="courses-showcase-block">
+        <img src="./images/course-business.jpg" alt="game of chess"/>
+        <div class="text">
+          <h3>Business</h3>
+          <h4>Courses</h4>
+          <p>Product Development, Business Development, Startup</p>
+        </div>
+      </div>
+
+      <div class="courses-showcase-block">
+        <img src="./images/course-marketing.jpg" alt="apple watch on wrist"/>
+        <div class="text">
+          <h3>Marketing</h3>
+          <h4>Courses</h4>
+          <p>Analytics, Content Marketing, Mobile Marketing</p>
+        </div>
       </div>
     </div>
-
-    <div class="courses-showcase-block">
-      <img src="./images/course-computer-art.jpg" />
-      <div class="text">
-        <h3>Computer art</h3>
-        <h4>Courses</h4>
-        <p>Imaging &amp; Design, Web Design, Motion Graphics &amp; Visual Effects, Computer Animation</p>
-      </div>
-    </div>
-
-    <div class="courses-showcase-block">
-      <img src="./images/course-design.jpg"/>
-      <div class="text">
-        <h3>Design</h3>
-        <h4>Courses</h4>
-        <p>User Experience Design, User Research, Visual Design</p>
-      </div>
-    </div>
-
-    <div class="courses-showcase-block">
-      <img src="./images/course-data.jpg"/>
-      <div class="text">
-        <h3>Data</h3>
-        <h4>Courses</h4>
-        <p>Data Science, Big Data, SQL, Data Visualization</p>
-      </div>
-    </div>
-
-    <div class="courses-showcase-block">
-      <img src="./images/course-business.jpg"/>
-      <div class="text">
-        <h3>Business</h3>
-        <h4>Courses</h4>
-        <p>Product Development, Business Development, Startup</p>
-      </div>
-    </div>
-
-    <div class="courses-showcase-block">
-      <img src="./images/course-marketing.jpg"/>
-      <div class="text">
-        <h3>Marketing</h3>
-        <h4>Courses</h4>
-        <p>Analytics, Content Marketing, Mobile Marketing</p>
-      </div>
-    </div>
-
   </div>
 
-</div>
+  <!-- mobile version of courses on offer. List, no images -->
+  <div class="courses-showcase-mobile">
+    <h3>Software engineering</h3>
+    <h3>Computer art</h3>
+    <h3>Design</h3>
+    <h3>Data</h3>
+    <h3>Business</h3>
+    <h3>Marketing</h3>
+  </div>
 
-<div class="courses-showcase-mobile">
-  <h3>Software engineering</h3>
-  <h3>Computer art</h3>
-  <h3>Design</h3>
-  <h3>Data</h3>
-  <h3>Business</h3>
-  <h3>Marketing</h3>
-</div>
+  <!-- Section 5: Thesis exhibit, featuring 1 highlighted image and article and a column of smaller articles -->
 
-<!-- Section - Thesis exhibit -->
+  <div class="thesis">
 
-<div class="thesis">
+    <h2>Thesis exhibit</h2>
 
-<h2>Thesis exhibit</h2>
-
-<div class="thesis-news-block">
-  <div class="highlighted-article" id="thesis-highlighted-article-no-top-margin">
-    <video controls>
+    <div class="thesis-news-block">
+      <div class="highlighted-article" id="thesis-highlighted-article-no-top-margin">
+        <video controls>
     <source src="./videos/thesis.mp4" type="video/mp4">
     </video>
-    <h3 id="thesis-highlighted-article-h3">Reimagine urban</h3>
-    <p>Milja Hartikainen's master thesis explores literature and benchmarking cases to provide practical tools for building successful multi-scalar urban developments, applying her findings to the neighbourhood of Moabit in Berlin.</p>
+        <h3 id="thesis-highlighted-article-h3">Reimagine urban</h3>
+        <p>Milja Hartikainen's master thesis explores literature and benchmarking cases to provide practical tools for building successful multi-scalar urban developments, applying her findings to the neighbourhood of Moabit in Berlin.</p>
+      </div>
+
+      <div class="news-carousel" id="thesis-news-carousel">
+        <div class="news-carousel-top" id="thesis-carousel-no-top-margin">
+          <img src="./images/thesis-fisma.jpg" alt="person creating colorful notes"/>
+          <div class="news-carousel-text">
+            <h3>Fisma: Design and Prototype</h3>
+            <h4>Designer showcase of new prototype product</h4>
+          </div>
+        </div>
+
+        <div class="news-carousel-bottom">
+          <img src="./images/thesis-now-and-then.jpg" alt="new york skyscrapers"/>
+          <div class="news-carousel-text">
+            <h3>Now and then</h3>
+            <h4>Research study about New York</h4>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 
-  <div class="news-carousel" id="thesis-news-carousel"> <!--can i use same id in two places?-->
-    <div class="news-carousel-top" id="thesis-carousel-no-top-margin">
-      <img src="./images/thesis-fisma.jpg"/>
-      <div class="news-carousel-text">
-        <h3>Fisma: Design and Prototype</h3>
-        <h4>Designer showcase of new prototype product</h4>
-      </div>
-    </div>
-    <div class="news-carousel-bottom">
-      <img src="./images/thesis-now-and-then.jpg"/>
-      <div class="news-carousel-text">
-        <h3>Now and then</h3>
-        <h4>Research study about New York</h4>
-      </div>
-    </div>
-  </div>
-</div>
-</div> <!-- is this 1 extra div?-->
+  <!-- Section 6: footer featuring copyright statement and navigation links -->
+  <footer>
+    <p>© 2016 Colmar Academy. All rights reserved</p>
 
-<!-- footer section -->
-<footer>
-<p>© 2016 Colmar Academy. All rights reserved</p>
-
-  <nav>
-    <ul>
-      <li><a href="./index.html">Terms</a></li>
-      <li><a href="./index.html">Privacy</a></li>
-    </ul>
-  </nav>
-</footer>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Terms</a></li>
+        <li><a href="./index.html">Privacy</a></li>
+      </ul>
+    </nav>
+  </footer>
 
 </body>
 
