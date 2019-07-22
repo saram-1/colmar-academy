@@ -183,6 +183,10 @@ line-height: 1.4;
 .news-carousel-top:hover, .news-carousel-middle:hover, .news-carousel-bottom:hover {
   background-color: #CCC;
 }
+
+.courses-showcase-mobile {
+  display: none;
+}
 }
 
 .news-carousel-middle img, .news-carousel-bottom img {
@@ -427,6 +431,10 @@ footer nav {
   padding: 32px 16px 32px 16px;
 }
 
+.welcome-banner-description .button {
+  font-size: 1.4rem;
+}
+
 .highlighted-article {
 display: none;
 }
@@ -480,26 +488,49 @@ visibility: hidden;
 } don't know how to stop hover on mobile*/
 
 
-.courses-showcase-block img,
+/*.courses-showcase-block img,
 .courses-showcase-block h4,
 .courses-showcase-block p {
   display: none;
-}
+}*/
 
 .courses-showcase-block {
-  height: 40px; /*wrong!*/
+  /*height: 40px; /*wrong!*/
+  /*padding: 16px 0px 24px 16px;
+  background-color: #CCC;*/
+  display: none;
+}
+
+/*.courses-showcase-block h3 {
+  display: flex;
+  flex-direction: column;
+}*/
+
+.courses-showcase-mobile {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 16px 32px 16px;
+}
+
+.courses-showcase-mobile h3 {
   padding: 16px 0px 24px 16px;
   background-color: #CCC;
+  margin: 8px;
+  font-size: 1.5rem;
+  font-weight: normal;
 }
 
 .courses {
   background-color: white;
   border-top: 1px solid #CCC;
+  padding: 0px;
 }
 
 .courses-showcase-title {
 font-size: 2.5rem;
 padding-bottom: 16px;
+padding-top: 32px;
+text-align: center;
 }
 
 .thesis {
