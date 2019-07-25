@@ -352,6 +352,10 @@ footer nav {
     display: none;
   }
 
+  .navigation-bar {
+    padding: 0px;
+  }
+
   .nav-links ul {
     display: none;
   }
@@ -364,7 +368,7 @@ footer nav {
   .nav-links-mobile ul {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: baseline;
   }
 
