@@ -1,5 +1,4 @@
 /* Global styles */
-
 * {
   margin: 0;
   padding: 0;
@@ -26,14 +25,12 @@ a {
 }
 
 /* Section 1: Navigation bar */
-
 .navigation-bar {
   height: 64px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   padding: 0px 24px;
 }
 
@@ -51,7 +48,7 @@ span {
 
 .navigation-bar nav li {
   list-style-type: none;
-  display: inline;
+  display: inline-flex;
   padding: 0px 16px;
 }
 
@@ -60,7 +57,6 @@ span {
 }
 
 /* Section 2: Welcome banner */
-
 .welcome-banner {
   background-color: #CCC;
   display: flex;
@@ -73,12 +69,17 @@ span {
 #welcome-banner-img {
   width: 60%;
   padding: 32px 24px;
+  flex-shrink: 1;
+  /* Flex shrink doesn't seem to be working? */
 }
 
 .welcome-banner-description {
   display: flex;
   flex-direction: column;
   max-width: 30%;
+  min-width: 300px;
+  flex-shrink: 2;
+  /* Flex shrink doesn't seem to be working? */
 }
 
 .welcome-banner-description h2 {
@@ -103,15 +104,13 @@ span {
   text-decoration: none;
 }
 
-
-@media only screen and (min-width: 600px) {
-.welcome-banner-description .button:hover {
-  background-color: #434a54;
-}
+@media only screen and (min-width: 960px) {
+  .welcome-banner-description .button:hover {
+    background-color: #434a54;
+  }
 }
 
 /* Section 3: News */
-
 .news {
   background-color: #F2F2F2;
   display: flex;
@@ -120,7 +119,6 @@ span {
 }
 
 /* Highlighted article */
-
 .highlighted-article {
   margin: 32px 24px 32px 24px;
   width: 60%;
@@ -129,7 +127,6 @@ span {
 }
 
 #highlighted-article-img {
-  /*flex: 1 2 60%;*/
   width: 100%;
 }
 
@@ -140,8 +137,8 @@ span {
 }
 
 .highlighted-article p {
-font-size: 1.1rem;
-line-height: 1.4;
+  font-size: 1.1rem;
+  line-height: 1.4;
 }
 
 .author {
@@ -150,7 +147,6 @@ line-height: 1.4;
 }
 
 /* News carousel */
-
 .news-carousel {
   padding-bottom: 32px;
   width: 40%;
@@ -160,7 +156,6 @@ line-height: 1.4;
 .news-carousel-top,
 .news-carousel-middle,
 .news-carousel-bottom {
-  width: 100%;
   display: flex;
   flex-direction: row;
 }
@@ -169,16 +164,17 @@ line-height: 1.4;
   padding-top: 32px;
 }
 
-@media only screen and (min-width: 600px) {
-.news-carousel-top:hover,
-.news-carousel-middle:hover,
-.news-carousel-bottom:hover {
-  background-color: #CCC;
-}
+@media only screen and (min-width: 960px) {
 
-.courses-showcase-mobile {
-  display: none;
-}
+  .news-carousel-top:hover,
+  .news-carousel-middle:hover,
+  .news-carousel-bottom:hover {
+    background-color: #CCC;
+  }
+
+  .courses-showcase-mobile {
+    display: none;
+  }
 }
 
 .news-carousel-middle img,
@@ -222,7 +218,6 @@ line-height: 1.4;
 }
 
 /* Section 4: Courses */
-
 /* "Start learning" title */
 .courses-showcase-title {
   display: flex;
@@ -233,7 +228,6 @@ line-height: 1.4;
 }
 
 /* tile cards */
-
 .courses {
   padding: 32px 72px;
   background-color: #CCC
@@ -290,9 +284,7 @@ line-height: 1.4;
   padding-bottom: 6px;
 }
 
-
 /* Section 5: Thesis exhibit */
-
 /* "Thesis exhibit" title */
 .thesis h2 {
   display: flex;
@@ -325,11 +317,11 @@ line-height: 1.4;
 }
 
 video {
-  max-height: 450px; /* Problem area: I want there to be no gap at the top of the video */
+  max-height: 450px;
+  /* Problem area: I want there to be no gap at the top of the video, but not sure how to achieve it */
 }
 
 /* Section 6: footer */
-
 footer {
   padding-top: 16px;
   padding-left: 24px;
@@ -352,171 +344,172 @@ footer nav {
   float: right;
 }
 
-/* Mobile friendly version of the site */
-
-@media only screen and (max-width: 600px) {
+/* Mobile/tablet friendly version of the site */
+@media only screen and (max-width: 960px) {
 
   /* Section 1: Navigation bar */
+  .logo {
+    display: none;
+  }
 
-.logo h1 {
-  display: none;
-}
+  .nav-links ul {
+    display: none;
+  }
 
-.nav-links ul {
-  display: none;
-}
+  .nav-links-mobile {
+    display: flex;
+    width: 100%;
+  }
 
-.nav-links-mobile {
-  display: flex;
-}
+  .nav-links-mobile ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 
-/* Section 2: Welcome banner */
+  /* Section 2: Welcome banner */
+  #welcome-banner-img {
+    width: 100%;
+    padding: 0px;
+  }
 
-#welcome-banner-img {
-  width: 100%;
-  padding: 0px;
-}
+  .welcome-banner-description {
+    max-width: 100%;
+    padding: 32px 16px 32px 16px;
+  }
 
-.welcome-banner-description {
-  max-width: 100%;
-  padding: 32px 16px 32px 16px;
-}
+  .welcome-banner-description h2 {
+    font-size: 2.5rem;
+  }
 
-.welcome-banner-description h2 {
-  font-size: 2.5rem;
-}
+  .welcome-banner-description h3 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    padding: 32px 0px 24px 0px;
+  }
 
-.welcome-banner-description h3 {
-  font-size: 1.5rem;
-  font-weight: normal;
-  padding: 32px 0px 24px 0px;
-}
+  .welcome-banner-description .button {
+    font-size: 1.4rem;
+  }
 
-.welcome-banner-description .button {
-  font-size: 1.4rem;
-}
+  /* Section 3: News */
+  .highlighted-article {
+    display: none;
+  }
 
-/* Section 3: News */
+  .news-carousel {
+    width: 100%;
+    background-color: white;
+    padding-bottom: 0px;
+  }
 
-.highlighted-article {
-display: none;
-}
+  .news-carousel-text {
+    padding-left: 16px;
+    width: 90%;
+  }
 
-.news-carousel {
-  width: 100%;
-  background-color: white;
-  padding-bottom: 0px;
-}
+  .news-carousel-text h3 {
+    font-size: 1.8rem;
+    padding-top: 10px;
+  }
 
-.news-carousel-text {
-padding-left: 16px;
-width: 90%;
-}
+  .news-carousel-top,
+  .news-carousel-middle,
+  .news-carousel-bottom {
+    flex-direction: column;
+    padding-bottom: 32px;
+    /* Spec says 64px but that looks too big to me. I chose 32px instead */
+    padding-left: 16px;
+  }
 
-.news-carousel-text h3 {
-  font-size: 1.8rem;
-  padding-top: 10px;
-}
+  .news-carousel-top {
+    padding-top: 16px;
+  }
 
-.news-carousel-top,
-.news-carousel-middle,
-.news-carousel-bottom {
-  flex-direction: column;
-  padding-bottom: 32px; /* Spec says 64px but that looks too big to me. I chose 32px instead */
-  padding-left: 16px;
-}
+  .news-carousel-top img,
+  .news-carousel-middle img,
+  .news-carousel-bottom img {
+    width: 90%;
+    height: 270px;
+    object-fit: cover;
+    padding-left: 0px;
+  }
 
-.news-carousel-top {
-padding-top: 16px;
-}
+  /* Section 4: Courses */
+  .courses {
+    background-color: white;
+    border-top: 1px solid #CCC;
+    padding: 0px;
+  }
 
-.news-carousel-top img,
-.news-carousel-middle img,
-.news-carousel-bottom img {
-width: 90%;
-height: 270px;
-object-fit: cover;
-padding-left: 0px;
-}
+  .courses-showcase-title {
+    font-size: 2.5rem;
+    padding-bottom: 16px;
+    padding-top: 32px;
+    text-align: center;
+  }
 
-/* Section 4: Courses */
+  .courses-showcase-block {
+    display: none;
+  }
 
-.courses {
-  background-color: white;
-  border-top: 1px solid #CCC;
-  padding: 0px;
-}
+  .courses-showcase-mobile {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 16px 32px 16px;
+  }
 
-.courses-showcase-title {
-font-size: 2.5rem;
-padding-bottom: 16px;
-padding-top: 32px;
-text-align: center;
-}
+  .courses-showcase-mobile h3 {
+    padding: 16px 0px 24px 16px;
+    background-color: #CCC;
+    margin: 8px;
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
 
-.courses-showcase-block {
-  display: none;
-}
+  /* Section 5: Thesis exhibit */
+  .thesis {
+    border-top: 1px solid #CCC;
+  }
 
-.courses-showcase-mobile {
-  display: flex;
-  flex-direction: column;
-  margin: 0px 16px 32px 16px;
-}
+  .thesis h2 {
+    font-size: 2.5rem;
+    padding: 32px 0px 16px 0px;
+  }
 
-.courses-showcase-mobile h3 {
-  padding: 16px 0px 24px 16px;
-  background-color: #CCC;
-  margin: 8px;
-  font-size: 1.5rem;
-  font-weight: normal;
-}
+  .thesis .news-carousel {
+    display: none;
+  }
 
-/* Section 5: Thesis exhibit */
+  .thesis video {
+    display: block;
+    width: 100%;
+  }
 
-.thesis {
-  border-top: 1px solid #CCC;
-}
+  #thesis-highlighted-article-no-top-margin {
+    display: block;
+    width: 100%;
+    margin: 0px;
+  }
 
-.thesis h2 {
-  font-size: 2.5rem;
-  padding: 32px 0px 16px 0px;
-}
+  .thesis-news-block h3,
+  .thesis-news-block p {
+    display: none;
+  }
 
-.thesis .news-carousel {
-  display: none;
-}
+  /* Section 6: footer */
+  footer {
+    padding: 0px;
+    margin-top: 24px;
+    border-top: none;
+  }
 
-.thesis video {
-  display: block;
-  width: 100%;
-}
+  footer nav {
+    display: none;
+  }
 
-#thesis-highlighted-article-no-top-margin {
-  display: block;
-  width: 100%;
-  margin: 0px;
-}
-
-.thesis-news-block h3,
-.thesis-news-block p {
-  display: none;
-}
-
-/* Section 6: footer */
-
-footer {
-  padding: 0px;
-  margin-top: 24px;
-  border-top: none;
-}
-
-footer nav {
-  display: none;
-}
-
-footer p {
-  padding: 16px 0px 16px 16px;
-}
-
+  footer p {
+    padding: 16px 0px 16px 16px;
+  }
 }
